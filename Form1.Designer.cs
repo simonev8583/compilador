@@ -31,7 +31,11 @@
             this.checkCosnola = new System.Windows.Forms.CheckBox();
             this.checkArchivo = new System.Windows.Forms.CheckBox();
             this.textBoxConsola = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cargarBtn = new System.Windows.Forms.Button();
+            this.traducirBtn = new System.Windows.Forms.Button();
+            this.archivoTxtBoxMulti = new System.Windows.Forms.TextBox();
+            this.tablaSimbolos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaSimbolos)).BeginInit();
             this.SuspendLayout();
             // 
             // checkCosnola
@@ -39,7 +43,7 @@
             this.checkCosnola.AutoSize = true;
             this.checkCosnola.Checked = true;
             this.checkCosnola.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkCosnola.Location = new System.Drawing.Point(62, 235);
+            this.checkCosnola.Location = new System.Drawing.Point(60, 12);
             this.checkCosnola.Name = "checkCosnola";
             this.checkCosnola.Size = new System.Drawing.Size(67, 17);
             this.checkCosnola.TabIndex = 0;
@@ -50,7 +54,7 @@
             // checkArchivo
             // 
             this.checkArchivo.AutoSize = true;
-            this.checkArchivo.Location = new System.Drawing.Point(173, 235);
+            this.checkArchivo.Location = new System.Drawing.Point(160, 12);
             this.checkArchivo.Name = "checkArchivo";
             this.checkArchivo.Size = new System.Drawing.Size(62, 17);
             this.checkArchivo.TabIndex = 1;
@@ -60,35 +64,66 @@
             // 
             // textBoxConsola
             // 
-            this.textBoxConsola.Location = new System.Drawing.Point(62, 22);
+            this.textBoxConsola.Location = new System.Drawing.Point(29, 40);
             this.textBoxConsola.Multiline = true;
             this.textBoxConsola.Name = "textBoxConsola";
-            this.textBoxConsola.Size = new System.Drawing.Size(173, 189);
+            this.textBoxConsola.Size = new System.Drawing.Size(238, 189);
             this.textBoxConsola.TabIndex = 3;
             this.textBoxConsola.TextChanged += new System.EventHandler(this.textBoxConsola_TextChanged);
             // 
-            // button1
+            // cargarBtn
             // 
-            this.button1.Location = new System.Drawing.Point(273, 174);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cargarBtn.Location = new System.Drawing.Point(297, 173);
+            this.cargarBtn.Name = "cargarBtn";
+            this.cargarBtn.Size = new System.Drawing.Size(87, 37);
+            this.cargarBtn.TabIndex = 4;
+            this.cargarBtn.Text = "Cargar";
+            this.cargarBtn.UseVisualStyleBackColor = true;
+            this.cargarBtn.Click += new System.EventHandler(this.cargarBtn_Click);
+            // 
+            // traducirBtn
+            // 
+            this.traducirBtn.Location = new System.Drawing.Point(297, 240);
+            this.traducirBtn.Name = "traducirBtn";
+            this.traducirBtn.Size = new System.Drawing.Size(87, 37);
+            this.traducirBtn.TabIndex = 5;
+            this.traducirBtn.Text = "Traducir";
+            this.traducirBtn.UseVisualStyleBackColor = true;
+            this.traducirBtn.Click += new System.EventHandler(this.traducirBtn_Click);
+            // 
+            // archivoTxtBoxMulti
+            // 
+            this.archivoTxtBoxMulti.Location = new System.Drawing.Point(29, 240);
+            this.archivoTxtBoxMulti.Multiline = true;
+            this.archivoTxtBoxMulti.Name = "archivoTxtBoxMulti";
+            this.archivoTxtBoxMulti.Size = new System.Drawing.Size(238, 189);
+            this.archivoTxtBoxMulti.TabIndex = 6;
+            // 
+            // tablaSimbolos
+            // 
+            this.tablaSimbolos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaSimbolos.Location = new System.Drawing.Point(407, 24);
+            this.tablaSimbolos.Name = "tablaSimbolos";
+            this.tablaSimbolos.Size = new System.Drawing.Size(490, 286);
+            this.tablaSimbolos.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(699, 280);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(948, 441);
+            this.Controls.Add(this.tablaSimbolos);
+            this.Controls.Add(this.archivoTxtBoxMulti);
+            this.Controls.Add(this.traducirBtn);
+            this.Controls.Add(this.cargarBtn);
             this.Controls.Add(this.textBoxConsola);
             this.Controls.Add(this.checkArchivo);
             this.Controls.Add(this.checkCosnola);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tablaSimbolos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,7 +134,10 @@
         private System.Windows.Forms.CheckBox checkCosnola;
         private System.Windows.Forms.CheckBox checkArchivo;
         private System.Windows.Forms.TextBox textBoxConsola;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cargarBtn;
+        private System.Windows.Forms.Button traducirBtn;
+        private System.Windows.Forms.TextBox archivoTxtBoxMulti;
+        private System.Windows.Forms.DataGridView tablaSimbolos;
     }
 }
 
