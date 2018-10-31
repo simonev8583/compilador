@@ -12,7 +12,7 @@ namespace Compilador.AnalisisSintactico
     {
         private ComponenteLexico componente;
         private AnalisisLexico.AnalisisLexico anaLex = new AnalisisLexico.AnalisisLexico();
-        private string entrada;
+        public string cadenafinal;
         private bool depurar = true;
 
         public void analizar(bool depurarEntrada)
@@ -22,10 +22,9 @@ namespace Compilador.AnalisisSintactico
                 //componente = anaLex.devolverComponenteLexico();
                 formarPalabra();
                 depurar = depurarEntrada;
-                entrada = "";
                 if (ManejadorErrores.obtenerManejadorErrores().programaTieneErrore())
                 {
-                    MessageBox.Show("el programa esta mal escrito. verigique los errores presentados...");
+                    MessageBox.Show("El programa esta mal escrito. Verifique los errores presentados...");
                 }
                 else if (componente.categoria.Equals("FIN DE ARCHIVO"))
                 {
@@ -63,8 +62,8 @@ namespace Compilador.AnalisisSintactico
                 componente = anaLex.devolverComponenteLexico();
 
             }
-            Console.WriteLine(cadena + " esta cadena");
-           // return cadena;
+            cadenafinal = cadena;
+            // return cadena;
         }
        
 

@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCargarArchivo = new System.Windows.Forms.Button();
+            this.textBoxCadena = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaSimbolos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaErrores)).BeginInit();
             this.SuspendLayout();
@@ -110,6 +112,7 @@
             this.archivoTxtBoxMulti.Location = new System.Drawing.Point(12, 235);
             this.archivoTxtBoxMulti.Multiline = true;
             this.archivoTxtBoxMulti.Name = "archivoTxtBoxMulti";
+            this.archivoTxtBoxMulti.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.archivoTxtBoxMulti.Size = new System.Drawing.Size(238, 189);
             this.archivoTxtBoxMulti.TabIndex = 6;
             // 
@@ -157,10 +160,10 @@
             // 
             // textBoxArchivo
             // 
-            this.textBoxArchivo.Location = new System.Drawing.Point(10, 115);
+            this.textBoxArchivo.Location = new System.Drawing.Point(12, 115);
             this.textBoxArchivo.Multiline = true;
             this.textBoxArchivo.Name = "textBoxArchivo";
-            this.textBoxArchivo.Size = new System.Drawing.Size(240, 30);
+            this.textBoxArchivo.Size = new System.Drawing.Size(238, 30);
             this.textBoxArchivo.TabIndex = 11;
             // 
             // label1
@@ -198,7 +201,7 @@
             this.buttonCargarArchivo.BackColor = System.Drawing.SystemColors.Highlight;
             this.buttonCargarArchivo.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargarArchivo.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonCargarArchivo.Location = new System.Drawing.Point(87, 151);
+            this.buttonCargarArchivo.Location = new System.Drawing.Point(79, 151);
             this.buttonCargarArchivo.Name = "buttonCargarArchivo";
             this.buttonCargarArchivo.Size = new System.Drawing.Size(99, 37);
             this.buttonCargarArchivo.TabIndex = 15;
@@ -206,12 +209,33 @@
             this.buttonCargarArchivo.UseVisualStyleBackColor = false;
             this.buttonCargarArchivo.Click += new System.EventHandler(this.buttonCargarArchivo_Click);
             // 
+            // textBoxCadena
+            // 
+            this.textBoxCadena.Location = new System.Drawing.Point(273, 548);
+            this.textBoxCadena.Multiline = true;
+            this.textBoxCadena.Name = "textBoxCadena";
+            this.textBoxCadena.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxCadena.Size = new System.Drawing.Size(338, 123);
+            this.textBoxCadena.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(375, 518);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 18);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Cadena Traducida";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(948, 513);
+            this.ClientSize = new System.Drawing.Size(948, 741);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxCadena);
             this.Controls.Add(this.buttonCargarArchivo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -253,6 +277,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCargarArchivo;
+        private System.Windows.Forms.TextBox textBoxCadena;
+        private System.Windows.Forms.Label label4;
     }
 }
 

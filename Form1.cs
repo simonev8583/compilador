@@ -14,11 +14,13 @@ namespace Compilador
 {
     public partial class Form1 : Form
     {
+        string cadena = "";
         public Form1()
         {
             InitializeComponent();
             textBoxArchivo.Hide();
             buttonCargarArchivo.Hide();
+            textBoxArchivo.Enabled = false;
         }
 
         private void checkCosnola_CheckedChanged(object sender, EventArgs e)
@@ -81,14 +83,17 @@ namespace Compilador
 
         private void traducirBtn_Click(object sender, EventArgs e)
         {
+            textBoxCadena.Text = "";
             AnalisisSintactico.AnalisisSintactico asintac = new AnalisisSintactico.AnalisisSintactico();
             asintac.analizar(false);
+            cadena = asintac.cadenafinal;
+            textBoxCadena.Text = cadena;
             /*foreach (ComponenteLexico componente in TablaSimbolos.ObtenerInstancia().ObtenerTodo())
             {
                 MessageBox.Show("Lexema: " + componente.lexema + "\nCategoría: " + componente.categoria + "\nNúmero Línea: " + componente.numeroLinea + "\nPosición Inicial: " + componente.posicionInicial + "\nPosición Final: " + componente.posicionFinal);
             }
             */
-            
+
             tablaSimbolos.DataSource = TablaSimbolos.ObtenerInstancia().ObtenerTodo();
             tablaErrores.DataSource = ManejadorErrores.obtenerManejadorErrores().ObtenerTodo();
 
@@ -105,8 +110,11 @@ namespace Compilador
 
         private void TextoMorse_Click(object sender, EventArgs e)
         {
+            textBoxCadena.Text = "";
             AnalisisSintactico.AnalisisSintacticoTextoMorse asintac = new AnalisisSintactico.AnalisisSintacticoTextoMorse();
             asintac.analizar(false);
+            cadena = asintac.cadenafinal;
+            textBoxCadena.Text = cadena;
             /*foreach (ComponenteLexico componente in TablaSimbolos.ObtenerInstancia().ObtenerTodo())
             {
                 MessageBox.Show("Lexema: " + componente.lexema + "\nCategoría: " + componente.categoria + "\nNúmero Línea: " + componente.numeroLinea + "\nPosición Inicial: " + componente.posicionInicial + "\nPosición Final: " + componente.posicionFinal);
