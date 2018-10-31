@@ -13,7 +13,7 @@ namespace Compilador
         [STAThread]
         static void Main()
         {
-            
+            /*
             Linea linea1 = new Linea();
             Linea linea2 = new Linea();
             //linea1.contenido = "..... ... -... ";
@@ -52,12 +52,12 @@ namespace Compilador
                 Console.WriteLine(errores[i].lexema);
                 Console.WriteLine(errores[i].numeroLinea);
             }
-
-            /*
+            */
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            */
+            
         }
     }
 }
