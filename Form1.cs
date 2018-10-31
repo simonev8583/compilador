@@ -85,25 +85,26 @@ namespace Compilador
 
         private void traducirBtn_Click(object sender, EventArgs e)
         {
-            TablaErrores.ObtenerInstancia().limpiar();
-            TablaSimbolos.ObtenerInstancia().limpiar();
-            AnalisisLexico.AnalisisLexico analex = new AnalisisLexico.AnalisisLexico();
-
-            //ComponenteLexico comp = analex.analizar();
-            ComponenteLexico comp = new ComponenteLexico();
-            comp.categoria = "INICIO";
-
-            while (!"FIN DE ARCHIVO".Equals(comp.categoria))
-            {
-                comp = analex.devolverComponenteLexico();
-            }
+            AnalisisSintactico.AnalisisSintactico asintac = new AnalisisSintactico.AnalisisSintactico();
+            asintac.analizar(false);
             /*foreach (ComponenteLexico componente in TablaSimbolos.ObtenerInstancia().ObtenerTodo())
             {
                 MessageBox.Show("Lexema: " + componente.lexema + "\nCategoría: " + componente.categoria + "\nNúmero Línea: " + componente.numeroLinea + "\nPosición Inicial: " + componente.posicionInicial + "\nPosición Final: " + componente.posicionFinal);
             }
             */
+            
             tablaSimbolos.DataSource = TablaSimbolos.ObtenerInstancia().ObtenerTodo();
             tablaErrores.DataSource = ManejadorErrores.obtenerManejadorErrores().ObtenerTodo();
+
+        }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            TablaErrores.ObtenerInstancia().limpiar();
+            TablaSimbolos.ObtenerInstancia().limpiar();
+            ManejadorErrores.obtenerManejadorErrores().limpiarManejadorErrores();
+            tablaSimbolos.DataSource = null;
+            tablaErrores.DataSource = null;
         }
     }
 }

@@ -36,6 +36,7 @@
             this.archivoTxtBoxMulti = new System.Windows.Forms.TextBox();
             this.tablaSimbolos = new System.Windows.Forms.DataGridView();
             this.tablaErrores = new System.Windows.Forms.DataGridView();
+            this.buttonLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaSimbolos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaErrores)).BeginInit();
             this.SuspendLayout();
@@ -117,12 +118,23 @@
             this.tablaErrores.Size = new System.Drawing.Size(490, 223);
             this.tablaErrores.TabIndex = 8;
             // 
+            // buttonLimpiar
+            // 
+            this.buttonLimpiar.Location = new System.Drawing.Point(297, 302);
+            this.buttonLimpiar.Name = "buttonLimpiar";
+            this.buttonLimpiar.Size = new System.Drawing.Size(87, 37);
+            this.buttonLimpiar.TabIndex = 9;
+            this.buttonLimpiar.Text = "Limpiar Tablas";
+            this.buttonLimpiar.UseVisualStyleBackColor = true;
+            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(948, 513);
+            this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.tablaErrores);
             this.Controls.Add(this.tablaSimbolos);
             this.Controls.Add(this.archivoTxtBoxMulti);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.TextBox archivoTxtBoxMulti;
         private System.Windows.Forms.DataGridView tablaSimbolos;
         private System.Windows.Forms.DataGridView tablaErrores;
+        private System.Windows.Forms.Button buttonLimpiar;
     }
 }
 

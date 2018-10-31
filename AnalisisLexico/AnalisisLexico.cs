@@ -101,6 +101,12 @@ namespace Compilador.AnalisisLexico
                             //lexema = lexema + caracterActual;
                             estadoActual = 76;
                         }
+                        else
+                        {
+                            lexemareserva += caracterActual;
+                            lexema += caracterActual;
+                            estadoActual = 79;
+                        }
                         break;
                     case 1:
                         leerSiguienteCaracter();
@@ -120,7 +126,7 @@ namespace Compilador.AnalisisLexico
                         }
                         else
                         {
-                            estadoActual = 39;
+                            estadoActual = 79;
                         }
                         break;
                     case 2:
@@ -292,7 +298,7 @@ namespace Compilador.AnalisisLexico
                         else if (caracterActual.Equals("."))
                         {
                             lexemareserva += caracterActual;
-                            estadoActual = 39;
+                            estadoActual = 39 ;
                         }
                         else if (caracterActual.Equals("-"))
                         {
@@ -394,7 +400,7 @@ namespace Compilador.AnalisisLexico
                         else if (caracterActual.Equals("."))
                         {
                             lexemareserva += caracterActual;
-                            estadoActual = 39;
+                            estadoActual = 39 ;
                         }
                         else if (caracterActual.Equals("-"))
                         {
@@ -449,7 +455,7 @@ namespace Compilador.AnalisisLexico
                         else if (caracterActual.Equals("-"))
                         {
                             lexemareserva += caracterActual;
-                            estadoActual = 39;
+                            estadoActual = 39 ;
                         }
                         else
                         {
@@ -586,6 +592,16 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         break;
                     case 39: // ESTADO DE ERROR
+                        bool control = controlExcepcion(caracterActual);
+                        while (!control)
+                        {
+                            lexemareserva += caracterActual;
+                            leerSiguienteCaracter();
+                            
+                            Console.WriteLine("error 80"+ lexemareserva);
+                            control = controlExcepcion(caracterActual);
+                        }
+
                         devolverPuntero();
                         Error r = Error.crear(lexemareserva, "LEXICOS", "ERROR CADENA", "No se reconoce ninguna letra con la cadena ingresada", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         ManejadorErrores.obtenerManejadorErrores().reportarError(r);
@@ -1071,6 +1087,17 @@ namespace Compilador.AnalisisLexico
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Espacio", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
+                    case 79:
+                        Error er = Error.crear(lexemareserva, "SINTACTICO", "ERROR DE CARACTER", "SE INGRESO UN CARACTER NO VALIDO, FAVOR CAMBIARLO", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
+                        ManejadorErrores.obtenerManejadorErrores().reportarError(er);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "ERROR SINTACTICO", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
+                        //TablaSimbolos.ObtenerInstancia().agregar(componente);
+                        TablaErrores.ObtenerInstancia().agregar(er);
+
+
+                        continuarAnalisis = false;
+                        break;
+                    
                 }
             }
 
@@ -1091,6 +1118,23 @@ namespace Compilador.AnalisisLexico
             error.posicionInicial = puntero - error.lexema.Length;
             error.posicionFinal = (puntero - 1);
             TablaErrores.ObtenerInstancia().agregar(error);
+        }
+        public bool controlExcepcion(string caracter)
+        {
+            bool ans = false;
+            if(caracter.Equals(" ")){
+                ans = true;
+            }
+            else if (caracter.Equals("/")){
+                ans = true;
+            }
+            else if (caracter.Equals("@FL@")){
+                ans = true;
+            }
+            else if (caracter.Equals("@EOF@")){
+                ans = true;
+            }
+            return ans;
         }
 
     }

@@ -70,6 +70,7 @@ namespace Compilador.Transversal
         public void limpiarManejadorErrores()
         {
             mapaErrores.Clear();
+            //this.mapaErrores= new Dictionary<string, List<Error>>();
             Console.WriteLine(this.ObtenerTodo());
             //mapaErrores["LEXICOS"].Clear();
             //mapaErrores["SINTACTICO"].Clear();
