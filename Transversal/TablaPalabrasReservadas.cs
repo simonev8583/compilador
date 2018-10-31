@@ -9,33 +9,60 @@ namespace Compilador.Transversal
     class TablaPalabrasReservadas
     {
         private static TablaPalabrasReservadas INSTANCIA = new TablaPalabrasReservadas();
-        private Dictionary<String, ComponenteLexico> tablaPalabrasReservadas = new Dictionary<string, ComponenteLexico>();
+        private Dictionary<string, string> tablaPalabrasReservadas = new Dictionary<string, string>();
 
         //inicializador de la tabla con las palabras reservadas.
         private TablaPalabrasReservadas()
         {
             //Acá hay que poner todas las posibles combinaciones de las palabras en minuscilas o mayusculas
-            tablaPalabrasReservadas.Add("SELECT", ComponenteLexico.crear("Select", "SELECT"));
-            tablaPalabrasReservadas.Add("FROM", ComponenteLexico.crear("From", "FROM"));
-            tablaPalabrasReservadas.Add("WHERE", ComponenteLexico.crear("Where", "WHERE"));
-            tablaPalabrasReservadas.Add("ORDER BY", ComponenteLexico.crear("Order by", "ORDER BY"));
-            tablaPalabrasReservadas.Add("OR", ComponenteLexico.crear("Or", "CONECTOR O"));
-            tablaPalabrasReservadas.Add("AND", ComponenteLexico.crear("And", "CONECTOR Y"));
-            tablaPalabrasReservadas.Add("ASC", ComponenteLexico.crear("Asc", "ASC"));
-            tablaPalabrasReservadas.Add("DESC", ComponenteLexico.crear("Desc", "DESC"));
-
+            tablaPalabrasReservadas.Add("A", ".- ");
+            tablaPalabrasReservadas.Add("B", "-... ");
+            tablaPalabrasReservadas.Add("C", "-.-. ");
+            tablaPalabrasReservadas.Add("D", "-.. ");
+            tablaPalabrasReservadas.Add("E", ". ");
+            tablaPalabrasReservadas.Add("F", "..-. ");
+            tablaPalabrasReservadas.Add("G", "--. ");
+            tablaPalabrasReservadas.Add("H", ".... ");
+            tablaPalabrasReservadas.Add("I", ".. ");
+            tablaPalabrasReservadas.Add("J", ".--- ");
+            tablaPalabrasReservadas.Add("K", "-.- ");
+            tablaPalabrasReservadas.Add("L", ".-.. ");
+            tablaPalabrasReservadas.Add("M", "-- ");
+            tablaPalabrasReservadas.Add("N", "-. ");
+            tablaPalabrasReservadas.Add("O", "--- ");
+            tablaPalabrasReservadas.Add("P", ".--. ");
+            tablaPalabrasReservadas.Add("Q", "--.- ");
+            tablaPalabrasReservadas.Add("R", ".-. ");
+            tablaPalabrasReservadas.Add("S", "... ");
+            tablaPalabrasReservadas.Add("T", "- ");
+            tablaPalabrasReservadas.Add("U", "..- ");
+            tablaPalabrasReservadas.Add("V", "...- ");
+            tablaPalabrasReservadas.Add("W", ".-- ");
+            tablaPalabrasReservadas.Add("X", "-..- ");
+            tablaPalabrasReservadas.Add("Y", "-.-- ");
+            tablaPalabrasReservadas.Add("Z", "--.. ");
+            tablaPalabrasReservadas.Add("1", ".---- ");
+            tablaPalabrasReservadas.Add("2", "..--- ");
+            tablaPalabrasReservadas.Add("3", "...-- ");
+            tablaPalabrasReservadas.Add("4", "....- ");
+            tablaPalabrasReservadas.Add("5", "..... ");
+            tablaPalabrasReservadas.Add("6", "-.... ");
+            tablaPalabrasReservadas.Add("7", "--... ");
+            tablaPalabrasReservadas.Add("8", "---.. ");
+            tablaPalabrasReservadas.Add("9", "----. ");
+            tablaPalabrasReservadas.Add("0", "----- ");
         }
         public static TablaPalabrasReservadas ObtenerInstancia()
         {
             return INSTANCIA;
         }
 
-        public ComponenteLexico obtenerPalabraReservada(String palabra)
+        public string obtenerPalabraReservada(string palabra)
         {
-            ComponenteLexico retorno = null;
+            string retorno = null;
             if (tablaPalabrasReservadas.ContainsKey(palabra))
             {
-                retorno = tablaPalabrasReservadas[palabra].clonar();
+                retorno = tablaPalabrasReservadas[palabra];
             }
             return retorno;
         }
