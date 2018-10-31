@@ -545,7 +545,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         break;
                     case 39: // ESTADO DE ERROR
-                        Error r = Error.crear(lexemareserva, lexema, "LEXICOS", "ERROR CADENA", "No se reconoce ninguna letra con la cadena ingresada", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
+                        Error r = Error.crear(lexemareserva, "LEXICOS", "ERROR CADENA", "No se reconoce ninguna letra con la cadena ingresada", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         ManejadorErrores.obtenerManejadorErrores().reportarError(r);
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "ERROR SINTACTICO", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         //TablaSimbolos.ObtenerInstancia().agregar(componente);

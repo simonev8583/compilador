@@ -39,6 +39,7 @@ namespace Compilador
             {
                 Console.WriteLine(tabla[i].categoria);
                 Console.WriteLine(tabla[i].lexema);
+                Console.WriteLine(tabla[i].letralexema);
                 Console.WriteLine(tabla[i].numeroLinea);
                 Console.WriteLine(tabla[i].posicionInicial);
                 Console.WriteLine(tabla[i].posicionFinal);
