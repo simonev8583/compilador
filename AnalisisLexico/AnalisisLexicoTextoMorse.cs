@@ -265,131 +265,132 @@ namespace Compilador.AnalisisLexico
                         }
                         else
                         {
+                            lexemareserva = caracterActual;
                             estadoActual = 19;
                         }
                         break;
 
                     case 1:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 2:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 3:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 4:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 5:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 6:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 7:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 8:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 9:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 10:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 11:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 12:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 13:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 14:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 15:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 16:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 17:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 18:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
@@ -397,9 +398,8 @@ namespace Compilador.AnalisisLexico
                         break;
 
                     case 19:
-                        devolverPuntero();
                         continuarAnalisis = false;
-                        Error r = Error.crear(lexemareserva, "LEXICOS", "ERROR CADENA", "No se reconoce ninguna letra con la cadena ingresada", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
+                        Error r = Error.crear(lexemareserva, "LEXICOS", "Caracter no valido.", "Ingrese una letra o un numero.", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         ManejadorErrores.obtenerManejadorErrores().reportarError(r);
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "ERROR SINTACTICO", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         //TablaSimbolos.ObtenerInstancia().agregar(componente);
@@ -409,7 +409,8 @@ namespace Compilador.AnalisisLexico
                     case 20:
                         continuarAnalisis = false;
                         estadoActual = 0;
-                        lexema="@EOF";
+                        lexemareserva = "";
+                        lexema="";
                         //Console.WriteLine("FIN DE ARCHIVO");
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "FIN DE ARCHIVO", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -422,14 +423,14 @@ namespace Compilador.AnalisisLexico
                         cargarNuevaLinea();
                         break;
                     case 22:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 23:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
@@ -437,112 +438,112 @@ namespace Compilador.AnalisisLexico
                         break;
 
                     case 24:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 25:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 26:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 27:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 28:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 29:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 30:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 31:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 32:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 33:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 34:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 35:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 36:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 37:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 38:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 39:
-                        leerSiguienteCaracter();
+                        //leerSiguienteCaracter();
                         lexema = TablaPalabrasReservadas.ObtenerInstancia().obtenerPalabraReservada(lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Numero", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);

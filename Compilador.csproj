@@ -50,6 +50,7 @@
     <Compile Include="AnalisisLexico\AnalisisLexicoTextoMorse.cs" />
     <Compile Include="AnalisisLexico\TipoComponente.cs" />
     <Compile Include="AnalisisSintactico\AnalisisSintactico.cs" />
+    <Compile Include="AnalisisSintactico\AnalisisSintacticoTextoMorse.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -17,11 +17,8 @@ namespace Compilador
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            textBoxArchivo.Hide();
+            buttonCargarArchivo.Hide();
         }
 
         private void checkCosnola_CheckedChanged(object sender, EventArgs e)
@@ -29,8 +26,10 @@ namespace Compilador
             if (checkCosnola.Focused)
             {
                 checkArchivo.CheckState = CheckState.Unchecked;
-                //  groupBoxConsola.Hide();
-                //  groupBoxArchivo.Show();
+                buttonCargarArchivo.Hide();
+                cargarBtn.Show();
+                textBoxArchivo.Hide();
+                textBoxConsola.Show();
             }
         }
 
@@ -39,14 +38,11 @@ namespace Compilador
             if (checkArchivo.Focused)
             {
                 checkCosnola.CheckState = CheckState.Unchecked;
-                //   groupBoxConsola.Show();
-                //  groupBoxArchivo.Hide();
+                textBoxArchivo.Show();
+                buttonCargarArchivo.Show();
+                cargarBtn.Hide();
+                textBoxConsola.Hide();
             }
-        }
-
-        private void textBoxConsola_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void cargarBtn_Click(object sender, EventArgs e)
@@ -105,6 +101,70 @@ namespace Compilador
             ManejadorErrores.obtenerManejadorErrores().limpiarManejadorErrores();
             tablaSimbolos.DataSource = null;
             tablaErrores.DataSource = null;
+        }
+
+        private void TextoMorse_Click(object sender, EventArgs e)
+        {
+            AnalisisSintactico.AnalisisSintacticoTextoMorse asintac = new AnalisisSintactico.AnalisisSintacticoTextoMorse();
+            asintac.analizar(false);
+            /*foreach (ComponenteLexico componente in TablaSimbolos.ObtenerInstancia().ObtenerTodo())
+            {
+                MessageBox.Show("Lexema: " + componente.lexema + "\nCategoría: " + componente.categoria + "\nNúmero Línea: " + componente.numeroLinea + "\nPosición Inicial: " + componente.posicionInicial + "\nPosición Final: " + componente.posicionFinal);
+            }
+            */
+
+            tablaSimbolos.DataSource = TablaSimbolos.ObtenerInstancia().ObtenerTodo();
+            tablaErrores.DataSource = ManejadorErrores.obtenerManejadorErrores().ObtenerTodo();
+        }
+
+        private void buttonCargarArchivo_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog abrirBuscador = new OpenFileDialog();
+            abrirBuscador.DefaultExt = "*.txt";
+            abrirBuscador.Filter = "Archivo de texto |*.txt";
+            abrirBuscador.Title = "Seleccione el archivo de texto";
+
+            if (abrirBuscador.ShowDialog() == DialogResult.OK)
+            {
+                //if (!abrirBuscador.FileName.Equals(""))
+
+                Archivo archivo = Archivo.obtenerInstancia();
+                //archivo.limpiarLineas();
+
+
+                string ruta = abrirBuscador.FileName;
+                textBoxArchivo.Text = ruta;
+
+                StreamReader sr = new StreamReader(ruta);
+                string lineaActual = "";
+                string leerLineaConcatenado = "";
+
+                int n = 1;
+                Linea line;
+
+                string[] arreglo = sr.ReadToEnd().Split('\n'); // salto de linea \n
+
+                foreach (string linea in arreglo)
+                {
+                    leerLineaConcatenado += linea;
+                }
+                arreglo = leerLineaConcatenado.Split('\r'); // retocedes carro \r
+
+                foreach (string linea in arreglo)
+                {
+                    line = new Linea();
+                    line.contenido = linea;
+                    line.Numero = n;
+                    archivo.agregarLinea(line);
+                    lineaActual = lineaActual + n + "-->" + line.contenido + Environment.NewLine;
+                    n++;
+                }
+
+                archivoTxtBoxMulti.Text = lineaActual;
+
+                sr.Close();
+            }
         }
     }
 }
