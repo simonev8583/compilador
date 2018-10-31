@@ -51,6 +51,7 @@ namespace Compilador
 
         private void cargarBtn_Click(object sender, EventArgs e)
         {
+            archivoTxtBoxMulti.Clear();
             Archivo archivo = Archivo.obtenerInstancia();
             archivo.limpiarLineas();
             string[] lineas32 = textBoxConsola.Text.Split('\r');
@@ -84,6 +85,8 @@ namespace Compilador
 
         private void traducirBtn_Click(object sender, EventArgs e)
         {
+            TablaErrores.ObtenerInstancia().limpiar();
+            TablaSimbolos.ObtenerInstancia().limpiar();
             AnalisisLexico.AnalisisLexico analex = new AnalisisLexico.AnalisisLexico();
 
             //ComponenteLexico comp = analex.analizar();
