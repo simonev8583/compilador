@@ -75,6 +75,7 @@ namespace Compilador.AnalisisLexico
                         {
                             leerSiguienteCaracter();
                         }
+                        
                         if (".".Equals(caracterActual))
                         {
                             lexemareserva += caracterActual;
@@ -105,7 +106,7 @@ namespace Compilador.AnalisisLexico
                         {
                             lexemareserva += caracterActual;
                             lexema += caracterActual;
-                            estadoActual = 79;
+                            estadoActual = 39 ;
                         }
                         break;
                     case 1:
@@ -126,14 +127,13 @@ namespace Compilador.AnalisisLexico
                         }
                         else
                         {
-                            estadoActual = 79;
+                            estadoActual = 39 ;
                         }
                         break;
                     case 2:
                         //leerSiguienteCaracter();
                         lexema = lexema + 'E';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -184,7 +184,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'I';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -214,7 +213,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'S';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -244,7 +242,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'H';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -264,7 +261,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '5';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero -1 - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -284,7 +280,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '4';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -314,7 +309,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'V';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -335,7 +329,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '3';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -365,7 +358,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'U';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -386,7 +378,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'F';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -427,7 +418,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '2';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -436,7 +426,6 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'A';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -487,7 +476,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'R';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -507,7 +496,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'L';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -516,7 +505,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'W';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -563,7 +552,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '1';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -572,7 +561,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'P';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -581,39 +570,40 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'J';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 38:// el / retorna Lexema
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
 
                         leerSiguienteCaracter();
                         break;
                     case 39: // ESTADO DE ERROR
+                        
                         bool control = controlExcepcion(caracterActual);
                         while (!control)
                         {
-                            lexemareserva += caracterActual;
                             leerSiguienteCaracter();
                             
-                            Console.WriteLine("error 80"+ lexemareserva);
                             control = controlExcepcion(caracterActual);
+                            if (!control)
+                            {
+                                lexemareserva += caracterActual;
+                            }
                         }
 
-                        devolverPuntero();
+                        //devolverPuntero();
                         Error r = Error.crear(lexemareserva, "LEXICOS", "ERROR CADENA", "No se reconoce ninguna letra con la cadena ingresada", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         ManejadorErrores.obtenerManejadorErrores().reportarError(r);
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "ERROR SINTACTICO", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         //TablaSimbolos.ObtenerInstancia().agregar(componente);
                         TablaErrores.ObtenerInstancia().agregar(r);
-
                         
+
                         continuarAnalisis = false;
 
-                        
-                        //Console.WriteLine("ERROR");
                         break;
                     case 40:
                         leerSiguienteCaracter();
@@ -640,7 +630,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'T';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -670,7 +660,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'M';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -700,7 +690,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'O';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -743,7 +733,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'N';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -773,7 +763,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'G';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -803,7 +793,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'Z';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -823,7 +813,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '7';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -843,7 +833,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'Q';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -880,6 +870,11 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 67;
                         }
+                        else if (caracterActual.Equals("-"))
+                        {
+                            lexemareserva += caracterActual;
+                            estadoActual = 79;
+                        }
                         else
                         {
                             estadoActual = 39;
@@ -889,7 +884,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'D';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -925,7 +920,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'B';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -945,7 +940,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '6';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -954,7 +949,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'X';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -963,7 +958,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'K';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -983,7 +978,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + 'C';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -1015,7 +1010,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '9';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -1035,7 +1030,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '0';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -1055,7 +1050,7 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         lexema = lexema + '8';
                         devolverPuntero();
-                        //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
+                        
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
@@ -1072,32 +1067,39 @@ namespace Compilador.AnalisisLexico
                         //Cargar componente
                         continuarAnalisis = false;
                         estadoActual = 0;
-                        //Console.WriteLine("FIN DE ARCHIVO");
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "FIN DE ARCHIVO", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 78:
+                        leerSiguienteCaracter();
                         continuarAnalisis = true;
                         estadoActual = 0;
-                        ////Console.WriteLine("ESPACIO");
                         lexema = lexema + " ";
                         //devolverPuntero();
-                        //Console.WriteLine("lexema  " + lexema + " lexemareserva " + lexemareserva);
                         continuarAnalisis = false;
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "Espacio", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 79:
-                        Error er = Error.crear(lexemareserva, "SINTACTICO", "ERROR DE CARACTER", "SE INGRESO UN CARACTER NO VALIDO, FAVOR CAMBIARLO", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
-                        ManejadorErrores.obtenerManejadorErrores().reportarError(er);
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "ERROR SINTACTICO", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
-                        //TablaSimbolos.ObtenerInstancia().agregar(componente);
-                        TablaErrores.ObtenerInstancia().agregar(er);
-
-
-                        continuarAnalisis = false;
+                        leerSiguienteCaracter();
+                        if(" ".Equals(caracterActual))
+                        {
+                            estadoActual = 80;
+                        }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
-                    
+                    case 80:
+                        //leerSiguienteCaracter();
+                        lexema = lexema + 'Y';
+                        devolverPuntero();
+                        
+                        continuarAnalisis = false;
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
+                        AgregarComponente(componente);
+                        break;
                 }
             }
 

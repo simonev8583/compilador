@@ -60,6 +60,10 @@ namespace Compilador.AnalisisSintactico
                 {
                     cadena += componente.letralexema;
                 }
+                else if (componente.categoria.Equals("ERROR SINTACTICO"))
+                {
+                    cadena += componente.letralexema;
+                }
                 componente = anaLex.devolverComponenteLexico();
 
             }
