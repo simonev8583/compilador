@@ -51,6 +51,8 @@ namespace Compilador
                 Console.WriteLine(errores[i].tipoError);
                 Console.WriteLine(errores[i].lexema);
                 Console.WriteLine(errores[i].numeroLinea);
+                Console.WriteLine(errores[i].solucion);
+                Console.WriteLine(errores[i].causa);
             }
             */
            
