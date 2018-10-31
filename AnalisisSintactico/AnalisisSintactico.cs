@@ -19,7 +19,8 @@ namespace Compilador.AnalisisSintactico
         {
             try
             {
-                componente = anaLex.devolverComponenteLexico();
+                //componente = anaLex.devolverComponenteLexico();
+                formarPalabra();
                 depurar = depurarEntrada;
                 entrada = "";
                 if (ManejadorErrores.obtenerManejadorErrores().programaTieneErrore())
@@ -28,7 +29,7 @@ namespace Compilador.AnalisisSintactico
                 }
                 else if (componente.categoria.Equals("FIN DE ARCHIVO"))
                 {
-                    MessageBox.Show("el programa esta mal escrito. verigique los errores presentados...");
+                    MessageBox.Show("Se logro formar la cadena");
                 }
                 else
                 {
@@ -38,9 +39,32 @@ namespace Compilador.AnalisisSintactico
             catch (Exception excepcion)
             {
                 MessageBox.Show(excepcion.Message);
+            }
+        }
 
+        public void formarPalabra()
+        {
+            componente = anaLex.devolverComponenteLexico();
+            string cadena = "";
+            while (!"FIN DE ARCHIVO".Equals(componente.categoria))
+            {
+                if (componente.categoria.Equals("Letra"))
+                {
+                    cadena += componente.letralexema;
+                }
+                else if (componente.categoria.Equals("Espacio"))
+                {
+                    cadena += componente.letralexema;
+                }
+                else if (componente.categoria.Equals("Número"))
+                {
+                    cadena += componente.letralexema;
+                }
+                componente = anaLex.devolverComponenteLexico();
 
             }
+            Console.WriteLine(cadena + " esta cadena");
+           // return cadena;
         }
        
 

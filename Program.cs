@@ -16,8 +16,8 @@ namespace Compilador
             /*
             Linea linea1 = new Linea();
             Linea linea2 = new Linea();
-            //linea1.contenido = "..... ... -... ";
-            linea1.contenido = "..... ... -... -.-- ";
+            linea1.contenido = "..... ... -... ";
+            //linea1.contenido = "..... ... -... -.-- ";
             linea1.Numero = 1;
             linea2.contenido = "----- /. /-.. ";
             linea2.Numero = 2;
@@ -33,7 +33,7 @@ namespace Compilador
                 comp = analexico.devolverComponenteLexico();
                 
             }
-
+            
             List<ComponenteLexico> tabla =  TablaSimbolos.ObtenerInstancia().ObtenerTodo();
             for (int i = 0; i < tabla.Count; i++)
             {
@@ -54,8 +54,9 @@ namespace Compilador
                 Console.WriteLine(errores[i].solucion);
                 Console.WriteLine(errores[i].causa);
             }
-            */
-           
+            AnalisisSintactico.AnalisisSintactico asintac = new AnalisisSintactico.AnalisisSintactico();
+            asintac.analizar(false); 
+           */
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
