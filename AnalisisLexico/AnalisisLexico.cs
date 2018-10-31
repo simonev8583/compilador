@@ -262,7 +262,7 @@ namespace Compilador.AnalisisLexico
                         lexema = lexema + '5';
                         devolverPuntero();
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero -1 - lexemareserva.Length, puntero - 1);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 12:
@@ -1109,8 +1109,17 @@ namespace Compilador.AnalisisLexico
         private void AgregarComponente(ComponenteLexico componente)
         {
             componente.numeroLinea = numeroLineaActual;
-            componente.posicionInicial = puntero - componente.lexema.Length;
-            componente.posicionFinal = (puntero - 1);
+            
+            if (componente.categoria.Equals("FIN DE ARCHIVO"))
+            {
+                componente.posicionInicial = 1;
+                componente.posicionFinal = 1;
+            }
+            else
+            {
+                componente.posicionInicial = puntero - componente.lexema.Length - 1;
+                componente.posicionFinal = (puntero - 2);
+            }
             TablaSimbolos.ObtenerInstancia().agregar(componente);
         }
 

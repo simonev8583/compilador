@@ -557,8 +557,16 @@ namespace Compilador.AnalisisLexico
         private void AgregarComponente(ComponenteLexico componente)
         {
             componente.numeroLinea = numeroLineaActual;
-            componente.posicionInicial = puntero - componente.lexema.Length;
-            componente.posicionFinal = (puntero - 1);
+            if (componente.categoria.Equals("FIN DE ARCHIVO"))
+            {
+                componente.posicionInicial = 1;
+                componente.posicionFinal = 1;
+            }
+            else
+            {
+                componente.posicionInicial = puntero - componente.lexema.Length;
+                componente.posicionFinal = (puntero - 1);
+            }
             TablaSimbolos.ObtenerInstancia().agregar(componente);
         }
 
