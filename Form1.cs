@@ -100,7 +100,7 @@ namespace Compilador
             }
             */
             tablaSimbolos.DataSource = TablaSimbolos.ObtenerInstancia().ObtenerTodo();
-            // tablaErrores.DataSource = ManejadorErrores.obtenerManejadorErrores().ObtenerTodo();
+            tablaErrores.DataSource = ManejadorErrores.obtenerManejadorErrores().ObtenerTodo();
         }
     }
 }

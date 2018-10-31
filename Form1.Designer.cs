@@ -35,7 +35,9 @@
             this.traducirBtn = new System.Windows.Forms.Button();
             this.archivoTxtBoxMulti = new System.Windows.Forms.TextBox();
             this.tablaSimbolos = new System.Windows.Forms.DataGridView();
+            this.tablaErrores = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tablaSimbolos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaErrores)).BeginInit();
             this.SuspendLayout();
             // 
             // checkCosnola
@@ -104,15 +106,24 @@
             this.tablaSimbolos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaSimbolos.Location = new System.Drawing.Point(407, 24);
             this.tablaSimbolos.Name = "tablaSimbolos";
-            this.tablaSimbolos.Size = new System.Drawing.Size(490, 286);
+            this.tablaSimbolos.Size = new System.Drawing.Size(490, 223);
             this.tablaSimbolos.TabIndex = 7;
+            // 
+            // tablaErrores
+            // 
+            this.tablaErrores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaErrores.Location = new System.Drawing.Point(407, 278);
+            this.tablaErrores.Name = "tablaErrores";
+            this.tablaErrores.Size = new System.Drawing.Size(490, 223);
+            this.tablaErrores.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(948, 441);
+            this.ClientSize = new System.Drawing.Size(948, 513);
+            this.Controls.Add(this.tablaErrores);
             this.Controls.Add(this.tablaSimbolos);
             this.Controls.Add(this.archivoTxtBoxMulti);
             this.Controls.Add(this.traducirBtn);
@@ -124,6 +135,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaSimbolos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaErrores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +150,7 @@
         private System.Windows.Forms.Button traducirBtn;
         private System.Windows.Forms.TextBox archivoTxtBoxMulti;
         private System.Windows.Forms.DataGridView tablaSimbolos;
+        private System.Windows.Forms.DataGridView tablaErrores;
     }
 }
 
