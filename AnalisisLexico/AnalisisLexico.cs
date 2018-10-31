@@ -117,6 +117,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 4;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 2:
                         //leerSiguienteCaracter();
@@ -124,7 +128,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra E", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 3:
@@ -143,6 +147,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 18;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 4:
                         leerSiguienteCaracter();
@@ -160,6 +168,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 27;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 5:
                         leerSiguienteCaracter();
@@ -167,7 +179,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra I", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 6:
@@ -186,6 +198,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 14;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 7:
                         leerSiguienteCaracter();
@@ -193,7 +209,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra S", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 8:
@@ -212,6 +228,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 12;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 9:
                         leerSiguienteCaracter();
@@ -219,7 +239,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra H", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 10:
@@ -239,7 +259,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 5", numeroLineaActual, puntero -1 - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero -1 - lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 12:
@@ -259,7 +279,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 4", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 14:
@@ -278,6 +298,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 16;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 15:
                         leerSiguienteCaracter();
@@ -285,7 +309,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra V", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 16:
@@ -306,7 +330,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 3", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 18:
@@ -325,6 +349,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 22;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 19:
                         leerSiguienteCaracter();
@@ -332,7 +360,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra U", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 20:
@@ -353,7 +381,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra F", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 22:
@@ -371,6 +399,10 @@ namespace Compilador.AnalisisLexico
                         {
                             lexemareserva += caracterActual;
                             estadoActual = 23;
+                        }
+                        else
+                        {
+                            estadoActual = 39;
                         }
                         break;
                     case 23:
@@ -390,7 +422,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 2", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 25:
@@ -399,7 +431,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra A", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 26:
@@ -416,6 +448,10 @@ namespace Compilador.AnalisisLexico
                         else if (caracterActual.Equals("-"))
                         {
                             lexemareserva += caracterActual;
+                            estadoActual = 39;
+                        }
+                        else
+                        {
                             estadoActual = 39;
                         }
                         break;
@@ -435,6 +471,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 33;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 28:
                         leerSiguienteCaracter();
@@ -442,7 +482,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra R", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 29:
@@ -462,7 +502,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra L", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 31:
@@ -471,7 +511,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra W", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 32:
@@ -518,7 +558,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 1", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 36:
@@ -527,7 +567,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra P", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 37:
@@ -536,7 +576,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra J", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 38:// el / retorna Lexema
@@ -573,6 +613,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 42;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 41:
                         leerSiguienteCaracter();
@@ -580,7 +624,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra T", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 42:
@@ -599,6 +643,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 44;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 43:
                         leerSiguienteCaracter();
@@ -606,7 +654,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra M", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 44:
@@ -625,6 +673,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 46;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 45:
                         leerSiguienteCaracter();
@@ -632,7 +684,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra O", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 46:
@@ -664,6 +716,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 58;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 48:
                         leerSiguienteCaracter();
@@ -671,7 +727,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra N", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 49:
@@ -690,6 +746,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 55;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 50:
                         leerSiguienteCaracter();
@@ -697,7 +757,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra G", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 51:
@@ -716,6 +776,10 @@ namespace Compilador.AnalisisLexico
                             lexemareserva += caracterActual;
                             estadoActual = 39;
                         }
+                        else
+                        {
+                            estadoActual = 39;
+                        }
                         break;
                     case 52:
                         leerSiguienteCaracter();
@@ -723,7 +787,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra Z", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra Z", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 53:
@@ -743,7 +807,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 7", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 55:
@@ -763,7 +827,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra Q", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 57:
@@ -781,6 +845,10 @@ namespace Compilador.AnalisisLexico
                         {
                             lexemareserva += caracterActual;
                             estadoActual = 61;
+                        }
+                        else
+                        {
+                            estadoActual = 39;
                         }
                         break;
                     case 58:
@@ -805,7 +873,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra D", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 60:
@@ -841,7 +909,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra B", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 63:
@@ -861,7 +929,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 6", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 65:
@@ -870,7 +938,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra X", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 66:
@@ -879,7 +947,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra K", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 67:
@@ -899,7 +967,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra C", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 69:
@@ -931,7 +999,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 9", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 72:
@@ -951,7 +1019,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 0", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 74:
@@ -971,7 +1039,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número 8", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Número", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 76:
@@ -987,7 +1055,7 @@ namespace Compilador.AnalisisLexico
                         continuarAnalisis = false;
                         estadoActual = 0;
                         Console.WriteLine("FIN DE ARCHIVO");
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "FIN DE ARCHIVO", numeroLineaActual, (puntero - 1) - lexemareserva.Length, puntero - 2);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "FIN DE ARCHIVO", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 78:
