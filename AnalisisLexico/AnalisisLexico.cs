@@ -586,14 +586,14 @@ namespace Compilador.AnalisisLexico
                         leerSiguienteCaracter();
                         break;
                     case 39: // ESTADO DE ERROR
-                        
+                        devolverPuntero();
                         Error r = Error.crear(lexemareserva, "LEXICOS", "ERROR CADENA", "No se reconoce ninguna letra con la cadena ingresada", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         ManejadorErrores.obtenerManejadorErrores().reportarError(r);
                         componente = ComponenteLexico.crear(lexemareserva, lexema, "ERROR SINTACTICO", numeroLineaActual, puntero - lexemareserva.Length, (puntero - 1));
                         //TablaSimbolos.ObtenerInstancia().agregar(componente);
                         TablaErrores.ObtenerInstancia().agregar(r);
 
-                        devolverPuntero();
+                        
                         continuarAnalisis = false;
 
                         
@@ -789,7 +789,7 @@ namespace Compilador.AnalisisLexico
                         devolverPuntero();
                         //Console.WriteLine("lexema  "+ lexema+" lexemareserva "+ lexemareserva);
                         continuarAnalisis = false;
-                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra Z", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
+                        componente = ComponenteLexico.crear(lexemareserva, lexema, "Letra", numeroLineaActual, puntero- lexemareserva.Length, puntero - 1);
                         AgregarComponente(componente);
                         break;
                     case 53:
